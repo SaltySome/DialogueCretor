@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialouge Creator</title>
+</head>
+<body>
+    <input type="file" id="jsonFileUpload" accept=".json"/>
+    <button style="background-color:lightblue" id="submit">Open</button>
+    <div>
+        <label id="path"></label>
+    </div>
+    <div>
+        <button id="back">Back</button>
+    </div>
+    <div style="margin-top:25px; margin-bottom:25px">
+        <label>Question</label>
+        <textarea style="width: 400px; height: 60px;" id="question"></textarea>
+    </div>
+    <div id="answers" style="margin-top:25px">
+        <span><button id="go1">GoNext</button><textarea id="1" style="width: 400px; height: 60px;"></textarea>points<input id="a" type="number"/></span>
+        <div></div>
+        <span><button id="go2">GoNext</button><textarea id="2" style="width: 400px; height: 60px;"></textarea>points<input id="b" type="number"/></span>
+        <div></div>
+        <span><button id="go3">GoNext</button><textarea id="3" style="width: 400px; height: 60px;"></textarea>points<input id="c" type="number"/></span>
+        <div></div>
+        <span><button id="go4">GoNext</button><textarea id="4" style="width: 400px; height: 60px;"></textarea>points<input id="d" type="number"/></span>
+        <div></div>
+    </div>
+    <div style="margin-top:10px;">
+        <label>FileName</label>
+        <input id="filename" type="text"/>
+        <button style="background-color:lightgreen;" id="save">Save</button>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
