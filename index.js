@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
 })
 
 document.addEventListener("change", (e) => {
+    if (document.getElementById('filename').value != fileinput_last) {
+        fileinput_last = document.getElementById('filename').value
+        return
+    }
     setDataFromPath(path_str+'/question', document.getElementById('question').value)
     setDataFromPath(path_str+"/a", {"text": document.getElementById("1").value, "num": document.getElementById("a").value})
     setDataFromPath(path_str+"/b", {"text": document.getElementById("2").value, "num": document.getElementById("b").value})
