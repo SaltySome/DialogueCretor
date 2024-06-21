@@ -16,15 +16,27 @@ document.addEventListener("DOMContentLoaded", (e) => {
 })
 
 document.addEventListener("change", (e) => {
-    if (document.getElementById('filename').value != fileinput_last) {
-        fileinput_last = document.getElementById('filename').value
-        return
-    }
     setDataFromPath(path_str+'/question', document.getElementById('question').value)
-    setDataFromPath(path_str+"/a", {"text": document.getElementById("1").value, "num": document.getElementById("a").value})
-    setDataFromPath(path_str+"/b", {"text": document.getElementById("2").value, "num": document.getElementById("b").value})
-    setDataFromPath(path_str+"/c", {"text": document.getElementById("3").value, "num": document.getElementById("c").value})
-    setDataFromPath(path_str+"/d", {"text": document.getElementById("4").value, "num": document.getElementById("d").value})
+
+    let a = {...getDataFromPath(path_str + "/a")}
+    a["text"] = document.getElementById("1").value
+    a["num"] = document.getElementById("a").value
+    setDataFromPath(path_str+"/a", a)
+
+    let b = {...getDataFromPath(path_str + "/b")}
+    b["text"] = document.getElementById("2").value
+    b["num"] = document.getElementById("b").value
+    setDataFromPath(path_str+"/b", b)
+
+    let c = {...getDataFromPath(path_str + "/c")}
+    c["text"] = document.getElementById("3").value
+    c["num"] = document.getElementById("c").value
+    setDataFromPath(path_str+"/c", c)
+
+    let d = {...getDataFromPath(path_str + "/d")}
+    d["text"] = document.getElementById("4").value
+    d["num"] = document.getElementById("d").value
+    setDataFromPath(path_str+"/d", d)
 })
 
 document.getElementById("submit").addEventListener("click", () => {
